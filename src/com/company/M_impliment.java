@@ -6,8 +6,7 @@ public class M_impliment implements CalculFunction_Interface {
     @Override
     public double calculTotal(AppMensualitePayer_moduls mo) {
 
-        double M = calculA(mo) / calculB(mo);
-        return M;
+        return calculA(mo) / calculB(mo);
     }
 
 
@@ -15,14 +14,12 @@ public class M_impliment implements CalculFunction_Interface {
     public double calculA(AppMensualitePayer_moduls modul) {
 
         double pow = Math.pow((1 + modul.r), modul.n);
-        double resulta = (modul.r * pow) * modul.p;
-        return resulta;
+        return (modul.r * pow) * modul.p;
     }
 
     @Override
     public double calculB(AppMensualitePayer_moduls modul) {
         double pow = Math.pow((1 + modul.r), modul.n);
-        double resultb = pow - 1;
-        return resultb;
+        return pow - 1;
     }
 }
